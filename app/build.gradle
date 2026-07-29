@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 34
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    namespace 'eu.kanade.tachiyomi.extension.zh.jm'
+}
+
+dependencies {
+    // Tachiyomi/Mihon 扩展 API
+    compileOnly 'com.github.tachiyomiorg:source-api:1.0.0'
+    
+    // Kotlin
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.22'
+    
+    // 网络请求
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    
+    // HTML 解析（用于评论内容提取）
+    implementation 'org.jsoup:jsoup:1.17.2'
+    
+    // JSON 解析（用于加密数据解析）
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2'
+}
