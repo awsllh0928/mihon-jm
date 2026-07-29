@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <application
+        android:allowBackup="false"
+        android:label="禁漫天堂"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoDisplay">
+        
+        <meta-data
+            android:name="tachiyomi.extension.name"
+            android:value="禁漫天堂" />
+        <meta-data
+            android:name="tachiyomi.extension.version"
+            android:value="1" />
+        <meta-data
+            android:name="tachiyomi.extension.versionName"
+            android:value="1.0.0" />
+        <meta-data
+            android:name="tachiyomi.extension.minAppVersion"
+            android:value="1.5.0" />
+        <meta-data
+            android:name="tachiyomi.extension.class"
+            android:value="eu.kanade.tachiyomi.extension.zh.jm.JmFactory" />
+    </application>
+</manifest>
